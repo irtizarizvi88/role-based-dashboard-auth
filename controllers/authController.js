@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 const express = require('express');
-const User = require('../models/user'); // correct path if inside controllers
+const User = require('../models/user'); 
 const jwt = require('jsonwebtoken');
 const app = express();
 app.use(express.json());
