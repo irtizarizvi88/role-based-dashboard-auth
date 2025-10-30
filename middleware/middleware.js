@@ -8,9 +8,9 @@ const token = req.header('Authorization')?.split(' ')[1];
   }
 
   try {
-    const decoded = jwt.verify(token, "secretkey"); // verify token
-    req.user = decoded; // user data (id, role) save ho gaya
-    next(); // next route pe jao
+    const decoded = jwt.verify(token, "secretkey"); 
+    req.user = decoded; 
+    next(); 
   } catch (err) {
     res.status(400).send({ message: "Invalid token" });
   }
